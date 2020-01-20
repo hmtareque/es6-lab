@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ES6 Lab</title>
+  <meta name="description" content="ES6 Lab">
+  <meta name="author" content="Hasan Tareque">
+</head>
+
+<body>
+  <script>
+
+    // var variable is funciton scoped 
+    // let & const variable is blocked scoped 
+
+    function setWidth() {
+      var width = 100;
+      console.log(width);
+    }
+    //setWidth();
+    //  console.log(width);
+
+    var age = 100;
+    if(age > 12) {
+      let dogYears = age * 7;
+     // console.log(`You are ${dogYears} dog year old.`);
+    }
+
+    let points = 50;
+    let winner = false; // scoped to the window
+    if(points > 40) {
+      let winner = true; // scoped to the block 
+    }
+
+    // const can't be updated 
+
+    // const object can be mutable 
+    const person = {
+      name : 'Hasan',
+      age : 35
+    }
+
+    // object can be freeze 
+    Object.freeze(person);
+
+    // IIFE - Immediately Invoked Function Expression 
+    // variable declared here not scoped outside window 
+    (function(){
+      var action = 'run ...';
+      //console.log(action);
+    })();
+    //  console.log(action); // not accessable 
+
+    // for(let i= 0; i < 10; i++) {
+    //   console.log(i);
+    //   setTimeout(function(){
+    //     console.log('The number is '+ i);
+    //   }, 1000);
+    // }
+
+    //console.log(pizza);
+    //var pizza = 'Deep Dish :)';
+
+    // use const by default 
+    // only use let if rebinding is needed 
+    // var shouldn't be use in ES6
+
+
+    </script>
+</body>
+</html>
