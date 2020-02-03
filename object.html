@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ES6 Lab</title>
+  <meta name="description" content="ES6 Lab">
+  <meta name="author" content="Hasan Tareque">
+</head>
+
+<body>
+  <script>
+
+    var john = {
+      name: 'John',
+      yearOfBirth: 1990,
+      job: 'teacher'
+    };
+
+    var Person = function (name, yearOfBirth, job) {
+      this.name = name;
+      this.yearOfBirth = yearOfBirth;
+      this.job = job;
+
+      this.calculateAge = function () {
+        console.log(2016 - this.yearOfBirth);
+      };
+
+      this.hobby = function () {
+        return 'Playing create';
+      }
+    }
+
+    var john = new Person('John', 1990, 'teacher');
+    var jane = new Person('Jane', 1969, 'designer');
+    var mark = new Person('Mark', 1948, 'retired');
+    john.calculateAge();
+    jane.calculateAge();
+    mark.calculateAge();
+
+    console.log(john.name);
+    console.log(jane.name);
+    console.log(mark.hobby());
+
+  </script>
+</body>
+
+</html>
