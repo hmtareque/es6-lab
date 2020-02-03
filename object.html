@@ -12,6 +12,8 @@
 <body>
   <script>
 
+    /*
+
     var john = {
       name: 'John',
       yearOfBirth: 1990,
@@ -42,6 +44,22 @@
     console.log(john.name);
     console.log(jane.name);
     console.log(mark.hobby());
+
+    */
+
+    var personProto = {
+      calculateAge: function() {
+        return 67;
+      }
+    }
+
+    var john = Object.create(personProto);
+    john.name = 'John Doe';
+
+    var jane = Object.create(personProto, {
+      name: { value: 'Jane Watson' }
+    });
+
 
   </script>
 </body>
