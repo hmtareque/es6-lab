@@ -45,7 +45,7 @@
     console.log(jane.name);
     console.log(mark.hobby());
 
-    */
+
 
     var personProto = {
       calculateAge: function() {
@@ -60,6 +60,27 @@
       name: { value: 'Jane Watson' }
     });
 
+    */
+
+    var years = [1990, 1997, 2000, 2005, 2012, 2018];
+
+    function arrayFunc(array, func) {
+      var arrRes = [];
+      for(var i = 0; i < array.length; i++) {
+        arrRes.push(func(array[i]));
+      }
+
+      return arrRes;
+
+    }
+
+    function calculateAge(year) {
+      return 2020 - year;
+    }
+
+    var age = arrayFunc(years, calculateAge);
+
+    console.log(age);
 
   </script>
 </body>
