@@ -71,16 +71,20 @@
       }
 
       return arrRes;
-
     }
 
     function calculateAge(year) {
       return 2020 - year;
     }
 
+    function isAdult(year) {
+      return (2020 - year) >= 18;
+    }
+    
     var age = arrayFunc(years, calculateAge);
+    var adults = arrayFunc(years, isAdult);
 
-    console.log(age);
+    console.log(adults);
 
   </script>
 </body>
